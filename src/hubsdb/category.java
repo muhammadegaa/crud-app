@@ -23,14 +23,11 @@ public class category {
     {
         this.jumlah = Jumlah;
         this.kodeBarang = KodeBarang;
+        this.namaBarang = NamaBarang;
         this.satuan = Satuan;
         this.kodeJenis = KodeJenis;
         this.namaJenis = NamaJenis;
         this.keterangan = Keterangan;
-    }
-
-    category(int aInt, String string, String string0, int aInt0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     public int getJumlah()
@@ -41,6 +38,11 @@ public class category {
     public String getKodeBarang()
     {
         return kodeBarang;
+    }
+    
+    public String getNamaBarang()
+    {
+        return namaBarang;
     }
     
     public String getSatuan()
@@ -62,4 +64,5 @@ public class category {
     {
         return keterangan;
     }
+
 }

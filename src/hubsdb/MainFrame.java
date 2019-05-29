@@ -426,15 +426,18 @@ public final class MainFrame extends javax.swing.JFrame {
     {
         ArrayList<category> users = ListUsers(jTextField7.getText());
         DefaultTableModel model = new DefaultTableModel();
-        model.setColumnIdentifiers(new Object[]{"Jumlah","KodeBarang","Satuan","KodeJenis", "NamaJenis", "Keterangan"});
-        Object[] row = new Object[4];
+        model.setColumnIdentifiers(new Object[]{"KodeBarang","NamaBarang","Jumlah","Satuan","KodeJenis", "NamaJenis", "Keterangan"});
+        Object[] row = new Object[7];
         
         for(int i = 0; i < users.size(); i++)
         {
-            row[0] = users.get(i).getJumlah();
-            row[1] = users.get(i).getKodeBarang();
-            row[2] = users.get(i).getSatuan();
-            row[3] = users.get(i).getKodeJenis();
+            row[0] = users.get(i).getKodeBarang();
+            row[1] = users.get(i).getNamaBarang();
+            row[2] = users.get(i).getJumlah();
+            row[3] = users.get(i).getSatuan();
+            row[4] = users.get(i).getKodeJenis();
+            row[5] = users.get(i).getNamaJenis();
+            row[6] = users.get(i).getKeterangan();
             model.addRow(row);
         }
        jTable1.setModel(model);
@@ -519,11 +522,12 @@ public final class MainFrame extends javax.swing.JFrame {
         Connection conn; 
             conn = DriverManager.getConnection(url,"root","");
         Statement st = conn.createStatement();
-        String query = "SELECT kode_barang, nama_barang, jumlah, satuan, kode_jenis, nama_jenis, keterangan FROM purchase WHERE nama_barang LIKE '%" + jTextField1.getText() + "%'";
+        String query = "SELECT kode_barang, nama_barang, jumlah, satuan, kode_jenis, nama_jenis, keterangan FROM purchase WHERE nama_barang LIKE '%" + jTextField7.getText() + "%'";
             ResultSet rs = st.executeQuery(query);
       jTable1.setModel(DbUtils.resultSetToTableModel(rs)); 
 
     conn.close();
+    load_table();
 
 }
      catch (SQLException e) { 
