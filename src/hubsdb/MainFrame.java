@@ -73,6 +73,7 @@ public final class MainFrame extends javax.swing.JFrame {
         setResizable(false);
 
         jButton7.setBackground(new java.awt.Color(100, 100, 100));
+        jButton7.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         jButton7.setForeground(new java.awt.Color(250, 250, 250));
         jButton7.setLabel("SEARCH");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +133,7 @@ public final class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+        jLabel6.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel6.setText("Kode Jenis");
 
         jTextField5.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
@@ -143,6 +145,7 @@ public final class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel7.setText("Nama Jenis");
 
         jTextArea1.setColumns(20);
@@ -150,6 +153,7 @@ public final class MainFrame extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel8.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel8.setText("Keterangan");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -195,12 +199,16 @@ public final class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel3.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel3.setText("Nama Barang");
 
+        jLabel4.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel4.setText("Jumlah");
 
+        jLabel5.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel5.setText("Satuan");
 
+        jLabel2.setFont(new java.awt.Font("Gadugi", 1, 11)); // NOI18N
         jLabel2.setText("Kode Barang");
 
         jTextField1.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
@@ -268,6 +276,7 @@ public final class MainFrame extends javax.swing.JFrame {
         );
 
         jButton6.setBackground(new java.awt.Color(100, 100, 100));
+        jButton6.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         jButton6.setForeground(new java.awt.Color(250, 250, 250));
         jButton6.setLabel("HAPUS");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -277,6 +286,7 @@ public final class MainFrame extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(100, 100, 100));
+        jButton3.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         jButton3.setForeground(new java.awt.Color(250, 250, 250));
         jButton3.setLabel("BATAL");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -286,6 +296,7 @@ public final class MainFrame extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(100, 100, 100));
+        jButton2.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         jButton2.setForeground(new java.awt.Color(250, 250, 250));
         jButton2.setText("UBAH");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -300,6 +311,7 @@ public final class MainFrame extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(100, 100, 100));
+        jButton1.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(250, 250, 250));
         jButton1.setText("SIMPAN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -333,7 +345,7 @@ public final class MainFrame extends javax.swing.JFrame {
                                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 4, Short.MAX_VALUE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,11 +363,11 @@ public final class MainFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(9, 9, 9)
                         .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton3)
-                        .addGap(8, 8, 8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -477,7 +489,7 @@ public final class MainFrame extends javax.swing.JFrame {
     {
         ArrayList<category> users = ListUsers(jTextField7.getText());
         DefaultTableModel model = new DefaultTableModel();
-        model.setColumnIdentifiers(new Object[]{"KodeBarang","NamaBarang","Jumlah","Satuan","KodeJenis", "NamaJenis", "Keterangan"});
+        model.setColumnIdentifiers(new Object[]{"Kode Barang","Nama Barang","Jumlah","Satuan","Kode Jenis", "Nama Jenis", "Keterangan"});
         Object[] row = new Object[7];
         
         for(int i = 0; i < users.size(); i++)
